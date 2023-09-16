@@ -33,4 +33,4 @@ jobs:
         uses: Liquid-Reply/demo-actions/infracost@main
         env:
           INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }} 
