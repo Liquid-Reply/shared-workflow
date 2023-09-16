@@ -27,7 +27,7 @@ jobs:
           aws-region: eu-central-1    
 
       - name: Run Infracost action
-        uses: Liquid-Reply/demo-actions@main
+        uses: Liquid-Reply/demo-actions/infracost@main
         env:
           INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
