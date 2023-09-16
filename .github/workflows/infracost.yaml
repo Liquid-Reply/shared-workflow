@@ -4,16 +4,14 @@ on:
       infracost_api_key:
         required: true
 env:
-      working-directory: /infracost_demo
       AWS_REGION: eu-central-1
       INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}        
 jobs:
   infracost:
     runs-on: ubuntu-latest
-    permissions:
-     contents: read
-      # Required to post comments
-     pull-requests: write
+    # permissions:
+    #  contents: read
+    #  pull-requests: write
     env:
        DEPLOYMENT_ENV: "dev"
 
@@ -33,4 +31,4 @@ jobs:
         uses: Liquid-Reply/demo-actions/infracost@main
         env:
           INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.PAT }} 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
